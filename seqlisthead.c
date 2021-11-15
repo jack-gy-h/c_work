@@ -1,8 +1,8 @@
-#include<stdio.h>
+#include <stdio.h>
 
-#include<stdlib.h>
+#include <stdlib.h>
 
-#include"seqlisthead.h"
+#include "seqlisthead.h"
 
 #define initsize 100
 
@@ -15,7 +15,6 @@ void Init(seqlist *L)
 
     L->allocationsize = initsize;
 }
-
 
 void create(seqlist *L, int l)
 {
@@ -38,15 +37,37 @@ void show(seqlist L)
     }
 }
 
-void showeach(seqlist L,int number){
+void showeach(seqlist L, int number)
+{
 
-    printf("第%d次变化后的顺序表：\n",number);
+    printf("第%d次变化后的顺序表：\n", number);
 
-    for (int i = 0; i < L.length;i++){
-
+    for (int i = 0; i < L.length; i++)
+    {
 
         printf("%d ", L.data[i]);
     }
 
     printf("\n");
+}
+
+void GetElem(seqlist L, int location, int *num)
+{
+
+    *num = L.data[location - 1];
+
+    printf("获取到的第%d个位置上的元素为：%d\n", location, *num);
+}
+
+void ListInsert(seqlist *L, int location, int num)
+{
+
+    L->length++;
+
+    for (int i = L->length - 1; i >= location; i--)
+    {
+        L->data[i] = L->data[i - 1];
+    }
+
+    L->data[location - 1] = num;
 }
