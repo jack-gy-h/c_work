@@ -232,3 +232,94 @@
         
         
          -->
+
+         <!-- T7.c启示 -->
+
+
+
+         <!-- while循环可以和for循环相互转换：
+         
+         
+         for(int i = 0;i<L->length;i++)
+         {
+
+
+
+
+           code
+
+
+
+
+         }
+
+
+         等价于
+
+         int i = 0;
+
+         while(i<L->length)
+         {
+
+           
+           code
+
+
+
+           i++;
+         }
+         
+
+
+        当满足某个条件的时候就不比较了，用for循环已经无法准确或简单地表达出
+
+        想表达的意思了
+
+        因此使用while，当条件满足时，一直循环执行
+
+
+
+
+
+        当L1->data[i]>L2->data[j]时,将L2->data[j]插入到L3中
+
+        将比较的位数加一（j++）
+
+        否则的话，就将L1->data[i]插入到L3中
+
+        并将比较的位数加一（i++）
+
+        非此即彼，使用if..else..：
+
+        if(L1->data[i]>L2->data[j])
+                {
+                    ListInsertLastLocation(L3, k, L2->data[j]);
+
+                    k++;
+
+                    j++;
+                }else
+                {
+                   ListInsertLastLocation(L3, k, L1->data[i]);
+
+                    k++;
+
+                    i++;
+                }
+
+
+
+
+
+        重复上面的操作，直至i或者j有一个越界
+
+        就结束 while (i<=((L1->length)-1) && j<=((L2->length)-1))
+         
+         
+         
+         
+         
+         
+         
+         
+          -->

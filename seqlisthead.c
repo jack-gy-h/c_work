@@ -71,3 +71,30 @@ void ListInsert(seqlist *L, int location, int num)
 
     L->data[location - 1] = num;
 }
+
+void InitAndCreate(seqlist *L, int *l)
+{
+
+    Init(L);
+
+    printf("请输入顺序表的长度：\n");
+
+    scanf("%d", l);
+
+    printf("请输入顺序表：\n");
+
+    create(L, *l);
+
+    printf("创建的顺序表为：\n");
+
+    show(*L);
+
+    printf("\n");
+}
+
+void ListInsertLastLocation(seqlist *L, int location, int num){
+
+    L->length++;
+
+    L->data[location] = num;
+}

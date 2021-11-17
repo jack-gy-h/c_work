@@ -30,3 +30,10 @@ void GetElem(seqlist L, int location, int *num);
 
 // 往数组的第location个位置插入数据元素num
 void ListInsert(seqlist *L, int location, int num);
+
+// 初始化并创建顺序表及展示
+void InitAndCreate(seqlist *L, int *l);
+
+
+// 往顺序表的最后一位上插入数据
+void ListInsertLastLocation(seqlist *L, int location, int num);
